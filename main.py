@@ -6,3 +6,6 @@ def function eval_function():
 
 def function eval2_function():
   print("not evil")
+
+def function ending():
+  print("end")
