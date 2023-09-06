@@ -9,3 +9,6 @@ def function eval2_function():
 
 def function ending():
   print("end")
+
+  def function ending():
+  print("end2")
