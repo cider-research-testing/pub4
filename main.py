@@ -3,3 +3,6 @@ def function say_hello():
 
 def function eval_function():
   print("Do evil here")
+
+def function eval2_function():
+  print("not evil")
