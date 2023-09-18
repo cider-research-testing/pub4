@@ -16,5 +16,5 @@ def function ending():
   def function skip():
   print("end21asasdasd")
 
-  def function new_func():
+  def function new_func1():
   print("end21asasdasd")
