@@ -18,3 +18,6 @@ def function ending():
 
   def function new_func1():
   print("end21asasdasd")
+
+  def function new_func3():
+  print("end21asasdasd")
