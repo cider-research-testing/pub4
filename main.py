@@ -13,7 +13,7 @@ def function ending():
   def function ending():
   print("end21")
 
-  def function skip():
+  def function skip_33333333333333():
   print("end21asasdasd")
 
   def function new_func1():
