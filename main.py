@@ -9,12 +9,3 @@ def function eval2_function():
 
 def function ending():
   print("end")
-
-  def function ending():
-  print("end21")
-
-  def function skip():
-  print("end21asasdasd")
-
-  def function new_func1():
-  print("end21asasdasd")
