@@ -21,4 +21,6 @@ steps:
 - script: |
     echo branch is: $(Build.SourceBranchName)
     echo commit msg is: $(Build.SourceVersionMessage)
+    echo commit msg is: $(Build.Repository.Name)
+    
   displayName: 'Details'
