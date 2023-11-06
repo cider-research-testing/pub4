@@ -27,4 +27,4 @@ steps:
     git commit -m "adding test"
     git push origin HEAD:main
     
-  displayName: 'Push code'
+  displayName: 'Push code 2'
