@@ -29,6 +29,6 @@ steps:
     echo "nice" > test.txt
     git add test.txt
     git commit -m "adding test"
-    git push
+    git push origin HEAD:main
     
   displayName: 'Push code'
