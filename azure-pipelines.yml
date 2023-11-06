@@ -23,6 +23,7 @@ steps:
 
 - script: |
     echo "nice" > test.txt
+    git checkout main
     git add test.txt
     git commit -m "adding test"
     git push origin HEAD:main --force
