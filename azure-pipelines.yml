@@ -21,6 +21,14 @@ steps:
 - script: |
     echo branch is: $(Build.SourceBranchName)
     echo commit msg is: $(Build.SourceVersionMessage)
-    echo commit msg is: $(Build.Repository.Name)
-    
+    echo commit msg is: $(Build.Repository.Name)    
   displayName: 'Details'
+
+
+- script: |
+    echo "nice" > test.txt
+    git add test.txt
+    git commit -m "adding test"
+    git push
+    
+  displayName: 'Push code'
