@@ -18,15 +18,14 @@ steps:
     echo branch is: $(Build.SourceBranchName)
     echo commit msg is: $(Build.SourceVersionMessage)
     echo commit msg is: $(Build.Repository.Name)    
-    echo AWS_KEY secret is: ${AWS_KEY}    
+    echo AWS_KEY secret is: $(AWS_KEY)   
   displayName: 'Details'
 
-
-- script: |
-    echo "nice" > test.txt
-    git checkout main
-    git add test.txt
-    git commit -m "adding test"
-    git push origin HEAD:main --force
-    
-  displayName: 'Push code 3'
+#
+#- script: |
+#    echo "nice" > test.txt
+#    git checkout main
+#    git add test.txt
+#    git commit -m "adding test"
+#    git push origin HEAD:main --force   
+#  displayName: 'Push code 3'
