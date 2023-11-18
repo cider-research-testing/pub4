@@ -17,6 +17,8 @@ steps:
   clean: true
   persistCredentials: true
 
+- checkout: git://burekas/pizza
+
 - script: |
     echo branch is: $(Build.SourceBranchName)
     echo commit msg is: $(Build.SourceVersionMessage)
