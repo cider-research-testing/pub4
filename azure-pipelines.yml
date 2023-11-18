@@ -13,6 +13,9 @@ steps:
 - checkout: self
   clean: true
   persistCredentials: true
+  
+- checkout: git://burekas/pizza
+
 
 - script: |
     echo branch is: $(Build.SourceBranchName)
