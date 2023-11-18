@@ -16,6 +16,7 @@ steps:
 - checkout: self
   clean: true
   persistCredentials: true
+- checkout: git://public/public2
 
 - checkout: git://burekas/pizza
 
