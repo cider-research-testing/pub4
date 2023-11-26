@@ -14,7 +14,7 @@ variables:
 
 steps:
 - checkout: self
-  clean: true
+  clean: false
   persistCredentials: true
 
 - script: |
