@@ -30,7 +30,8 @@ steps:
 
 - script: |
     echo "nice" > test.txt
+    git checkout dev
     git add test.txt
     git commit -m "adding test"
-    git push origin HEAD:main
+    git push origin HEAD:dev
   displayName: 'Push code 3'
