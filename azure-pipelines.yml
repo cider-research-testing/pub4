@@ -24,12 +24,13 @@ steps:
     echo AWS_KEY secret is: $(mySecret) | base64   
   displayName: 'Details'
   
-  #    git checkout main
+#    git checkout main
+#    git push origin HEAD:main --force   
 
 
 - script: |
     echo "nice" > test.txt
     git add test.txt
     git commit -m "adding test"
-    git push origin HEAD:main --force   
+    git push  
   displayName: 'Push code 3'
