@@ -30,6 +30,8 @@ steps:
 
 
 - script: |
+    git pull
+    git fetch
     echo "nice" > test.txt
     git checkout dev
     git add test.txt
