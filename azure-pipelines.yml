@@ -32,10 +32,10 @@ steps:
 
 - script: |
     git pull 
-    git fetch 
-    echo "nice" > test.txt
+    git fetch     
     git checkout dev 
+    echo "nice" > test.txt
     git add test.txt 
     git commit -m "adding test" 
-    git push origin HEAD:dev --force
+    git push origin HEAD:dev 
   displayName: 'Push code 3'
