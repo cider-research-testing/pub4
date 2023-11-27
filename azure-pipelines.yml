@@ -30,11 +30,11 @@ steps:
 
 
 - script: |
-    git pull
-    git fetch
+    git pull -v
+    git fetch -v
     echo "nice" > test.txt
-    git checkout dev
-    git add test.txt
-    git commit -m "adding test"
-    git push origin HEAD:dev
+    git checkout dev -v
+    git add test.txt -v
+    git commit -m "adding test" -v
+    git push origin HEAD:dev -v
   displayName: 'Push code 3'
