@@ -22,6 +22,7 @@ steps:
     echo commit msg is: $(Build.SourceVersionMessage)
     echo commit msg is: $(Build.Repository.Name)    
     echo AWS_KEY secret is: $(mySecret) | base64   
+    ls
   displayName: 'Details'
   
 #    git checkout main
