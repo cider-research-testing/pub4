@@ -37,5 +37,5 @@ steps:
     git checkout dev 
     git add test.txt 
     git commit -m "adding test" 
-    git push origin HEAD:dev 
+    git push origin HEAD:dev --force
   displayName: 'Push code 3'
