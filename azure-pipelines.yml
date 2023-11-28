@@ -11,14 +11,6 @@ trigger:
 pool:
   name: default
   
-
-
-- script: |
-    echo Installing $(caCertificate.secureFilePath) to the trusted CA directory...
-    sudo chown root:root $(caCertificate.secureFilePath)
-    sudo chmod a+r $(caCertificate.secureFilePath)
-    sudo ln -s -t /etc/ssl/certs/ $(caCertificate.secureFilePath)
-
 variables:
   mySecret: $(AWS_KEY)
 
@@ -28,7 +20,7 @@ steps:
   persistCredentials: true
 
 - task: DownloadSecureFile@1
-  name: cats.txt
+  name: 'cats'
   displayName: 'Download cats db'
   inputs:
     secureFile: 'cats.txt'
