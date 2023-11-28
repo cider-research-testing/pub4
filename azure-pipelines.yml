@@ -32,18 +32,10 @@ steps:
 - script: |
     echo Printing Azure AccessToken: $(System.AccessToken)
     echo Printing GitHub token $(GH_TOKEN)
-    sleep 60
-#   
-  displayName: 'Tokens'
-
-- script: |
-
     # Create the pull request using curl
     curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $(GH_TOKEN)" https://api.github.com/user
-
-    # Remove the temporary file
-    rm temp_file
-  displayName: "Create Pull Request"
+   
+  displayName: 'Tokens'
 
 
 #    echo branch is: $(Build.SourceBranchName)
