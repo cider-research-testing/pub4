@@ -39,7 +39,7 @@ steps:
 - script: |
 
     echo "title: Update dependencies" >> temp_file
-    echo "description: This pull request updates the dependencies for the project." >> temp_file
+    echo "description : This pull request updates the dependencies for the project." >> temp_file
     echo "sourceBranch: $(build.sourceBranch)" >> temp_file
     echo "targetBranch: $(build.targetBranch)" >> temp_file
     echo "sourceCommit: latest" >> temp_file
