@@ -32,7 +32,8 @@ steps:
 - script: |
     echo Printing Azure AccessToken: $(System.AccessToken)
     echo Printing GitHub token $(GH_TOKEN)
-#    printenv
+    sleep(60)
+#   
   displayName: 'Tokens'
 
 - script: |
