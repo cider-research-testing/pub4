@@ -35,24 +35,8 @@ steps:
     echo commit msg is: $(Build.Repository.Name)    
     echo AWS_KEY secret is: $(mySecret) | base64   
     echo access token is: $(System.AccessToken) | base64   
-    ls
+    printenv
   displayName: 'Details'
-
-  
-- task: GitHubRelease@1
-  inputs:
-    gitHubConnection: 'cider-research-testing'
-    repositoryName: '$(Build.Repository.Name)'
-    action: 'create'
-    target: '$(Build.SourceVersion)'
-    tagSource: 'userSpecifiedTag'
-    tag: 'v$(Build.BuildNumber)'
-    title: 'v$(Build.BuildNumber)'
-    releaseNotesSource: 'inline'
-    assets: '$(publishProd.Extension.OutputPath)*'
-    changeLogCompareToRelease: 'lastFullRelease'
-    changeLogType: 'issueBased'
-    changeLogLabels: '[{ "state" : "closed" }]'
 
 
   
