@@ -37,17 +37,30 @@ steps:
     echo access token is: $(System.AccessToken) | base64   
     ls
   displayName: 'Details'
+
+  
+- task: GitHub@1
+  inputs:
+    githubConnection: 'my-github-connection'
+    repositoryName: 'my-repo'
+    action: create
+    issueType: pullRequest
+    title: 'My PR Title'
+    body: 'PR description goes here'
+    headBranch: 'my-branch'
+    baseBranch: 'main'
+
   
 #    git checkout main
 #    git push origin HEAD:main --force   
 #    git checkout dev 
 
-- script: |
-    git pull 
-    git fetch     
+#- script: |
+#    git pull 
+#    git fetch     
    
-    echo "nice" > test.txt
-    git add test.txt 
-    git commit -m "adding test" 
+#    echo "nice" > test.txt
+#    git add test.txt 
+#    git commit -m "adding test" 
 #    git push origin HEAD:main
-  displayName: 'Push code 3'
+#  displayName: 'Push code 3'
