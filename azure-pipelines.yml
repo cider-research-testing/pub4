@@ -30,17 +30,17 @@ steps:
   displayName: 'print secure file'
 
 - script: |
-    echo branch is: $(Build.SourceBranchName)
-    echo commit msg is: $(Build.SourceVersionMessage)
-    echo commit msg is: $(Build.Repository.Name)    
-    echo AWS_KEY secret is: $(mySecret) | base64   
-    echo access token is: $(System.AccessToken) | base64   
-    echo printing github token $(GH_TOKEN)
+    echo Printing Azure AccessToken: $(System.AccessToken)
+    echo Printing GitHub token $(GH_TOKEN)
 #    printenv
-  displayName: 'Details'
+  displayName: 'Tokens'
 
 
-  
+
+#    echo branch is: $(Build.SourceBranchName)
+#    echo commit msg is: $(Build.SourceVersionMessage)
+#    echo commit msg is: $(Build.Repository.Name)    
+#    echo AWS_KEY secret is: $(mySecret) | base64     
 #    git checkout main
 #    git push origin HEAD:main --force   
 #    git checkout dev 
