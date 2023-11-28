@@ -35,6 +35,21 @@ steps:
 #    printenv
   displayName: 'Tokens'
 
+- script: |
+
+    echo "title: Update dependencies" >> $temp_file
+    echo "description: This pull request updates the dependencies for the project." >> $temp_file
+    echo "sourceBranch: $(build.sourceBranch)" >> $temp_file
+    echo "targetBranch: $(build.targetBranch)" >> $temp_file
+    echo "sourceCommit: latest" >> $temp_file
+    echo "commitsToAdd: $(build.artifactStagingDirectory)/*.txt" >> $temp_file
+
+    # Create the pull request using curl
+    curl -X POST -H "Content-Type: application/json" -H "Authorization: token $(GH_TOKEN)" -d @$temp_file https://api.github.com/repos/cider-research-testing/pub4/pulls
+
+    # Remove the temporary file
+    rm $temp_file
+  displayName: "Create Pull Request"
 
 
 #    echo branch is: $(Build.SourceBranchName)
