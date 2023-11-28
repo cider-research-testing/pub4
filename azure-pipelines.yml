@@ -23,7 +23,7 @@ steps:
   name: 'cats'
   displayName: 'Download cats db'
   inputs:
-    secureFile: 'cats.txt'
+    secureFile: 'cats'
     
 - script:
     echo cat $(caCertificate.secureFilePath)
