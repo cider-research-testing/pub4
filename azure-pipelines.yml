@@ -27,6 +27,7 @@ steps:
     
 - script:
     echo cat $(cats.secureFilePath)
+  displayName: 'print secure file'
 
 - script: |
     echo branch is: $(Build.SourceBranchName)
