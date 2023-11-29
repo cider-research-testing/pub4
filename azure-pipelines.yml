@@ -26,20 +26,17 @@ steps:
     secureFile: 'cats'
     
 - script:
-    cat $(cats.secureFilePath)
-  displayName: 'print secure file'
+    mv $(cats.secureFilePath) $(Build.ArtifactStagingDirectory)
+  displayName: 'Move secure file'
 
-- script: |
-    echo Printing Azure AccessToken: $(System.AccessToken)
-    echo Printing GitHub token $(GH_TOKEN)
-    # Create the pull request using curl
+
     
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: '$(Build.ArtifactStagingDirectory)'
     artifactName: mega
    
-  displayName: 'Tokens'
+  displayName: 'Create Artifact'
 
 
 #    echo branch is: $(Build.SourceBranchName)
