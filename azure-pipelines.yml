@@ -24,8 +24,9 @@ steps:
 #  inputs:
 #    secureFile: 'cats'
     
-- script: 
+- script: |
      git config --list
+     git config --global credential.helper
   displayName: 'Git'
 
     
