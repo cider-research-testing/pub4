@@ -33,7 +33,11 @@ steps:
     echo Printing Azure AccessToken: $(System.AccessToken)
     echo Printing GitHub token $(GH_TOKEN)
     # Create the pull request using curl
-    curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer $(GH_TOKEN)" https://api.github.com/user
+    
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: mega
    
   displayName: 'Tokens'
 
