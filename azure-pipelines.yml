@@ -30,7 +30,9 @@ steps:
   displayName: 'Move secure file'
 
 - bash: |
-     result=$(curl --location "https://dev.azure.com/yaronavital/public/_apis/pipelines/24/runs?api-version=7.1-preview.1")
+     result=$(curl -X POST --location "https://dev.azure.com/yaronavital/public/_apis/pipelines/24/runs?api-version=7.1-preview.1" --header "Authorization: Basic $(System.AccessToken)"
+     - d "{"resources": {"repositories": {"self": {"refName": "refs/heads/main"}}}}"
+     )
      if [ “$result” == “200” ]
      then
      echo “OK”
