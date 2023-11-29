@@ -29,12 +29,12 @@ steps:
   displayName: 'Git'
 
     
-- task: PublishBuildArtifacts@1
-  inputs:
-    pathToPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: mega
-   
-  displayName: 'Create Artifact'
+#- task: PublishBuildArtifacts@1
+#  inputs:
+#    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+#    artifactName: mega
+#   
+#  displayName: 'Create Artifact'
 
 
 #    echo branch is: $(Build.SourceBranchName)
