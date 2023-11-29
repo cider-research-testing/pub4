@@ -34,7 +34,7 @@ steps:
   displayName: 'Create VAR'
 
 - script: |
-     curl --location "https://dev.azure.com/yaronavital/public/_apis/pipelines" --header "Authorization: Basic $(System.AccessToken)"
+     curl --location "https://dev.azure.com/yaronavital/public/_apis/pipelines" --header "Authorization: Basic $(System.AccessToken) -vvv"
   displayName: Trigger pipeline
 
     
