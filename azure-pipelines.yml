@@ -34,7 +34,14 @@ steps:
   displayName: 'Create VAR'
 
 - bash: |
-     curl --insecure --location "https://dev.azure.com/yaronavital/public/_apis/pipelines" 
+     result=$(curl --insecure --location "https://dev.azure.com/yaronavital/public/_apis/pipelines") 
+     if [ “$result” == “200” ]
+     then
+     echo “OK”
+     else
+     echo $result
+     exit 1
+     fi
   displayName: Trigger pipeline
 
     
