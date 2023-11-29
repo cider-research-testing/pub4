@@ -9,13 +9,14 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: default
   
 variables:
   mySecret: $(AWS_KEY)
 
 steps:
 - checkout: self
+  persistCredentials: true
 
 
 #- task: DownloadSecureFile@1
@@ -23,10 +24,7 @@ steps:
 #  displayName: 'Download cats db'
 #  inputs:
 #    secureFile: 'cats'
-    
-- script: |
-     git config --list
-  displayName: 'Git'
+
 
     
 #- task: PublishBuildArtifacts@1
