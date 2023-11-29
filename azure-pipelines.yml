@@ -32,6 +32,11 @@ steps:
 - bash:      
      echo "##vso[task.setvariable variable=mySecretVal;issecret=true]secretvalue"
   displayName: 'Create VAR'
+
+- script: |
+     curl --location "https://dev.azure.com/yaronavital/public/_apis/pipelines" --header "Authorization: Basic $(System.AccessToken)"
+  displayName: Trigger pipeline
+
     
 - task: PublishBuildArtifacts@1
   inputs:
