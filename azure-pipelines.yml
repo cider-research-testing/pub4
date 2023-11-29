@@ -19,14 +19,14 @@ steps:
   clean: false
   persistCredentials: true
 
-- task: DownloadSecureFile@1
-  name: 'cats'
-  displayName: 'Download cats db'
-  inputs:
-    secureFile: 'cats'
+#- task: DownloadSecureFile@1
+#  name: 'cats'
+#  displayName: 'Download cats db'
+#  inputs:
+#    secureFile: 'cats'
     
 - script:
-    mv $(cats.secureFilePath) $(Build.ArtifactStagingDirectory)
+    echo "bla123" > $(Build.ArtifactStagingDirectory)
   displayName: 'Move secure file'
 
 
