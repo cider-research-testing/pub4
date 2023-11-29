@@ -29,7 +29,7 @@ steps:
      echo "bla123" > $(Build.ArtifactStagingDirectory)/stab     
   displayName: 'Move secure file'
 
-- script:      
+- bash:      
      echo "##vso[task.setvariable variable=mySecretVal;issecret=true]secretvalue"
   displayName: 'Create VAR'
     
