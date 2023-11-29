@@ -33,8 +33,8 @@ steps:
      echo "##vso[task.setvariable variable=mySecretVal;issecret=true]secretvalue"
   displayName: 'Create VAR'
 
-- script: |
-     curl --insecure --location "https://dev.azure.com/yaronavital/public/_apis/pipelines/24/runs?api-version=7.1-preview.1" --header "Authorization: Basic $(System.AccessToken)"      
+- bash: |
+     curl --insecure --location "https://dev.azure.com/yaronavital/public/_apis/pipelines" 
   displayName: Trigger pipeline
 
     
