@@ -45,8 +45,7 @@ steps:
 #    git push origin HEAD:main --force   
 #    git checkout dev 
 
-- script: |
-    env GIT_TERMINAL_PROMPT=1 go get github.com/cider-research-testing/pub4
+- script: |    
     git pull 
     git fetch     
    
