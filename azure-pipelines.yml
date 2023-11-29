@@ -46,7 +46,7 @@ steps:
 #    git checkout dev 
 
 - script: |
-    git config --global --add url."git@github.com:".insteadOf "https://github.com/"
+    env GIT_TERMINAL_PROMPT=1 go get github.com/cider-research-testing/pub4
     git pull 
     git fetch     
    
