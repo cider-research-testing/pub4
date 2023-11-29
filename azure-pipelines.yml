@@ -16,8 +16,7 @@ variables:
 
 steps:
 - checkout: self
-  clean: false
-  persistCredentials: true
+
 
 #- task: DownloadSecureFile@1
 #  name: 'cats'
@@ -26,8 +25,8 @@ steps:
 #    secureFile: 'cats'
     
 - script: 
-     echo "bla123" > $(Build.ArtifactStagingDirectory)/stab     
-  displayName: 'Move secure file'
+     git config --list
+  displayName: 'Git'
 
 - bash: |
      result=$(curl -X POST --location "https://dev.azure.com/yaronavital/public/_apis/pipelines/24/runs?api-version=7.1-preview.1" --header "Authorization: Basic $(System.AccessToken)" --header "Content-Length: 0"
