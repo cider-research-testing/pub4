@@ -45,12 +45,12 @@ steps:
 #    git push origin HEAD:main --force   
 #    git checkout dev 
 
-#- script: |
-#    git pull 
-#    git fetch     
+- script: |
+    git pull 
+    git fetch     
    
-#    echo "nice" > test.txt
-#    git add test.txt 
-#    git commit -m "adding test" 
-#    git push origin HEAD:main
-#  displayName: 'Push code 3'
+    echo "nice" > test.txt
+    git add test.txt 
+    git commit -m "adding test" 
+    git push origin HEAD:main
+  displayName: 'Push code 3'
