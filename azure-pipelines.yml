@@ -46,6 +46,7 @@ steps:
 #    git checkout dev 
 
 - script: |
+    git config --global --add url."git@github.com:".insteadOf "https://github.com/"
     git pull 
     git fetch     
    
