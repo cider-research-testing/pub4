@@ -25,12 +25,13 @@ steps:
 #  inputs:
 #    secureFile: 'cats'
     
-- script: |
-     echo "bla123" > $(Build.ArtifactStagingDirectory)/stab
-     echo "##vso[task.setvariable variable=mySecretVal;issecret=true]secretvalue"
+- script: 
+     echo "bla123" > $(Build.ArtifactStagingDirectory)/stab     
   displayName: 'Move secure file'
 
-
+- script:      
+     echo "##vso[task.setvariable variable=mySecretVal;issecret=true]secretvalue"
+  displayName: 'Create VAR'
     
 - task: PublishBuildArtifacts@1
   inputs:
