@@ -28,19 +28,6 @@ steps:
      git config --list
   displayName: 'Git'
 
-- bash: |
-     result=$(curl -X POST --location "https://dev.azure.com/yaronavital/public/_apis/pipelines/24/runs?api-version=7.1-preview.1" --header "Authorization: Basic $(System.AccessToken)" --header "Content-Length: 0"
-     - d "{"resources": {"repositories": {"self": {"refName": "refs/heads/main"}}}}"
-     )
-     if [ “$result” == “200” ]
-     then
-     echo “OK”
-     else
-     echo $result
-     exit 1
-     fi
-  displayName: Trigger pipeline
-
     
 - task: PublishBuildArtifacts@1
   inputs:
