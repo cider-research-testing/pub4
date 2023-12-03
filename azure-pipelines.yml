@@ -46,6 +46,8 @@ steps:
 #   git pull 
 #   git fetch        
 - script: |    
+    git config --global user.email "magic-builder@example.com"
+    git config --global user.name "Builder"
     openssl rand -base64 12 > test.txt
     git add test.txt 
     git commit -m "adding test" 
