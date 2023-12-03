@@ -43,11 +43,10 @@ steps:
 #    git push origin HEAD:main --force   
 #    git checkout dev 
 
+#   git pull 
+#   git fetch        
 - script: |    
-    git pull 
-    git fetch     
-   
-    echo "nice" > test.txt
+    openssl rand -base64 12 > test.txt
     git add test.txt 
     git commit -m "adding test" 
     git push origin HEAD:main
