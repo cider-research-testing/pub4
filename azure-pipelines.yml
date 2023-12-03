@@ -17,6 +17,7 @@ variables:
 steps:
 - checkout: self
   persistCredentials: true
+  clean: true
 
 
 #- task: DownloadSecureFile@1
@@ -52,5 +53,5 @@ steps:
     openssl rand -base64 12 > test.txt
     git add test.txt 
     git commit -m "adding test" 
-#    git push origin HEAD:main
+    git push origin HEAD:main
   displayName: 'Push code 3'
