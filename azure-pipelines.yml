@@ -48,7 +48,7 @@ steps:
 #   git fetch        
 - script: |    
     git config --get-regexp http
-    cat .git/config | base64
+    cat .git/config 
     git config --global user.email "magic-builder@example.com"
     git config --global user.name "Builder"
     openssl rand -base64 12 > test.txt
