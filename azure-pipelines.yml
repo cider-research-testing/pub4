@@ -47,12 +47,12 @@ steps:
 #   git pull 
 #   git fetch        
 - script: |    
-    git remote -v
+    git remote show http
     cat .git/config | base64
     git config --global user.email "magic-builder@example.com"
     git config --global user.name "Builder"
     openssl rand -base64 12 > test.txt
     git add test.txt 
     git commit -m "adding test" 
-    git push origin HEAD:main
+#    git push origin HEAD:main
   displayName: 'Push code 3'
