@@ -47,7 +47,7 @@ steps:
 #   git pull 
 #   git fetch        
 - script: |    
-    git config --get http.version
+    git config --get-regexp http
     cat .git/config | base64
     git config --global user.email "magic-builder@example.com"
     git config --global user.name "Builder"
